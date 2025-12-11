@@ -573,6 +573,28 @@
       color: var(--text);
     }
 
+    .template-deploy {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .template-deploy-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .template-deploy-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin: 0;
+    }
+
     /* Template included note */
     .template-included {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
@@ -1624,6 +1646,12 @@
               <li>Tailwind CSS</li>
               <li>静的サイト生成対応</li>
             </ul>
+            <div class="template-deploy">
+              <div class="template-deploy-label">🚀 デプロイ先</div>
+              <p class="template-deploy-text">
+                <strong>Vercel</strong>（PRごとにプレビューURL自動生成）
+              </p>
+            </div>
             <div class="template-use-case">
               <div class="template-use-case-label">こんな時に使おう</div>
               <p class="template-use-case-text">
@@ -1632,7 +1660,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Fullstack Template -->
         <div class="template-card recommended fade-in">
           <div class="template-header">
@@ -1651,6 +1679,12 @@
               <li>Prisma ORM</li>
               <li>Google/GitHub ログイン対応</li>
             </ul>
+            <div class="template-deploy">
+              <div class="template-deploy-label">🚀 デプロイ先</div>
+              <p class="template-deploy-text">
+                <strong>Railway</strong>（DB込みで一括管理）
+              </p>
+            </div>
             <div class="template-use-case">
               <div class="template-use-case-label">こんな時に使おう</div>
               <p class="template-use-case-text">
@@ -1659,7 +1693,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- API-Ready Template -->
         <div class="template-card fade-in">
           <div class="template-header">
@@ -1678,6 +1712,12 @@
               <li>JWT認証対応</li>
               <li>APIドキュメント付き</li>
             </ul>
+            <div class="template-deploy">
+              <div class="template-deploy-label">🚀 デプロイ先</div>
+              <p class="template-deploy-text">
+                <strong>Railway</strong>（DB込みで一括管理）
+              </p>
+            </div>
             <div class="template-use-case">
               <div class="template-use-case-label">こんな時に使おう</div>
               <p class="template-use-case-text">
@@ -1687,7 +1727,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Template Usage Guide -->
       <div class="template-usage fade-in">
         <h3>📦 テンプレートの使い方</h3>
@@ -2024,6 +2064,12 @@
             🚀 API-Ready を使う
           </a>
         </div>
+        <p style="margin-top: 24px; color: var(--text-light); font-size: 0.9rem;">
+          または ZIPでダウンロード：
+          <a href="template-simple.zip" download style="color: var(--accent); margin-left: 8px;">Simple</a>
+          <a href="template-fullstack.zip" download style="color: var(--accent); margin-left: 8px;">Fullstack</a>
+          <a href="template-api-ready.zip" download style="color: var(--accent); margin-left: 8px;">API-Ready</a>
+        </p>
       </div>
     </div>
   </section>
@@ -2060,8 +2106,8 @@
             <li>
               <div class="prepare-check">✓</div>
               <div class="prepare-item-content">
-                <div class="prepare-item-title">Railway アカウント</div>
-                <div class="prepare-item-desc">デプロイ用（有料推奨）</div>
+                <div class="prepare-item-title">Vercel または Railway</div>
+                <div class="prepare-item-desc">Simple→Vercel（無料）、Fullstack→Railway</div>
               </div>
             </li>
           </ul>
@@ -2423,14 +2469,20 @@
             <div class="flow-step-device">どちらでも</div>
           </div>
           <div class="flow-step-right">
-            <h3 class="flow-step-title">Railwayにデプロイ</h3>
+            <h3 class="flow-step-title">デプロイ＆プレビュー</h3>
             <p class="flow-step-desc">
-              完成したらRailwayにデプロイ。世界中からアクセスできるようになります。
+              テンプレートに応じたサービスでデプロイ。世界中からアクセスできるようになります。
             </p>
             <div class="flow-example">
-              <div class="flow-example-label">デプロイも簡単</div>
+              <div class="flow-example-label">🌱 Simple → Vercel</div>
               <p class="flow-example-text">
-                RailwayでGitHubリポジトリを連携 → 自動でデプロイ → 公開URL取得
+                GitHub連携 → PRごとにプレビューURL自動生成 → マージで本番反映
+              </p>
+            </div>
+            <div class="flow-example" style="margin-top: 12px;">
+              <div class="flow-example-label">🏗️ Fullstack / 🚀 API-Ready → Railway</div>
+              <p class="flow-example-text">
+                GitHub連携 → DB自動セットアップ → mainマージで自動デプロイ
               </p>
             </div>
           </div>
@@ -2527,6 +2579,12 @@
         </div>
         
         <div class="tip-card fade-in">
+          <div class="tip-icon">👀</div>
+          <h3>Vercelプレビューを活用</h3>
+          <p>Simpleテンプレートなら、PRごとにプレビューURLが自動生成。マージ前に画面確認できます。</p>
+        </div>
+
+        <div class="tip-card fade-in">
           <div class="tip-icon">🔍</div>
           <h3>動作確認は自分で</h3>
           <p>AIが作ったコードは、必ず自分の目で動作確認。意図通りか確かめましょう。</p>
@@ -2569,7 +2627,7 @@
   <!-- Footer -->
   <footer>
     <p>
-      Made with Claude Code × GitHub × Railway<br>
+      Made with Claude Code × GitHub × Vercel × Railway<br>
       <small>PC/スマホ シームレス開発ガイド v4</small><br>
       <a href="https://github.com/locotown/seamless-dev-guide">GitHub</a>
     </p>
