@@ -2153,6 +2153,13 @@
             <li>
               <div class="prepare-check">✓</div>
               <div class="prepare-item-content">
+                <div class="prepare-item-title">GitHub アプリ（推奨）</div>
+                <div class="prepare-item-desc">PRマージがスマホで簡単に</div>
+              </div>
+            </li>
+            <li>
+              <div class="prepare-check">✓</div>
+              <div class="prepare-item-content">
                 <div class="prepare-item-title">同じアカウントでログイン</div>
                 <div class="prepare-item-desc">PC版と同じClaudeアカウント</div>
               </div>
@@ -2318,10 +2325,76 @@
             </div>
           </div>
         </div>
-        
-        <!-- STEP 4 -->
+
+        <!-- STEP 4: Vercel/Railway連携 -->
         <div class="step fade-in">
           <div class="step-number">4</div>
+          <div class="step-content">
+            <div class="step-title">
+              <span>🚀</span> デプロイサービスと連携
+              <span class="device-indicator pc">💻 PC推奨</span>
+            </div>
+            <p class="step-desc">
+              テンプレートに応じたデプロイサービスと連携します。これでPRプレビューや自動デプロイが使えるようになります。
+            </p>
+
+            <div class="step-visual">
+              <p style="font-weight: 600; margin-bottom: 12px;">🌱 Simple テンプレート → Vercel</p>
+              <div class="emoji-bullet">
+                <span>1️⃣</span>
+                <span><a href="https://vercel.com" target="_blank">vercel.com</a> にアクセス（GitHubでログイン可）</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>2️⃣</span>
+                <span>「Add New Project」をクリック</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>3️⃣</span>
+                <span>作成したリポジトリを選択して「Import」</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>4️⃣</span>
+                <span>「Deploy」をクリック（設定はそのままでOK）</span>
+              </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 16px;">
+              <p>✨ <strong>Vercelの魅力：</strong>PRを作成すると自動でプレビューURLが生成されます。マージ前に画面確認できるので、開発がスムーズに！</p>
+            </div>
+
+            <div class="step-visual" style="margin-top: 24px;">
+              <p style="font-weight: 600; margin-bottom: 12px;">🏗️ Fullstack / 🚀 API-Ready テンプレート → Railway</p>
+              <div class="emoji-bullet">
+                <span>1️⃣</span>
+                <span><a href="https://railway.app" target="_blank">railway.app</a> にアクセス（GitHubでログイン可）</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>2️⃣</span>
+                <span>「New Project」→「Deploy from GitHub repo」</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>3️⃣</span>
+                <span>作成したリポジトリを選択</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>4️⃣</span>
+                <span>PostgreSQLを追加：「+ New」→「Database」→「PostgreSQL」</span>
+              </div>
+              <div class="emoji-bullet">
+                <span>5️⃣</span>
+                <span>環境変数を設定（.env.example を参照）</span>
+              </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 16px;">
+              <p>💡 <strong>Railwayの魅力：</strong>アプリとDBを一括管理。mainにマージすると自動でデプロイされます。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="step fade-in">
+          <div class="step-number">5</div>
           <div class="step-content">
             <div class="step-title">
               <span>✅</span> 動作確認
@@ -2422,17 +2495,24 @@
           <div class="flow-step-left">
             <div class="flow-step-icon">🔀</div>
             <div class="flow-step-label">STEP 3</div>
-            <div class="flow-step-device">自動</div>
+            <div class="flow-step-device">自動 + 確認</div>
           </div>
           <div class="flow-step-right">
-            <h3 class="flow-step-title">PRを作成・マージ</h3>
+            <h3 class="flow-step-title">プレビュー確認 → PRマージ</h3>
             <p class="flow-step-desc">
-              Claude が作業完了すると、自動でPull Requestを作成。確認してマージします。
+              Claude が作業完了すると、自動でPRを作成。Vercel連携済みなら、プレビューURLで画面確認できます。
             </p>
             <div class="flow-example">
-              <div class="flow-example-label">PRの流れ</div>
+              <div class="flow-example-label">Vercel利用時の流れ</div>
               <p class="flow-example-text">
-                Claude がコード変更 → PR作成 → 内容を確認 → マージ → main に反映
+                Claude がPR作成 → Vercelがプレビュー生成 → 画面確認 → OKならマージ
+              </p>
+            </div>
+            <div class="flow-example" style="margin-top: 12px;">
+              <div class="flow-example-label">PRマージの方法</div>
+              <p class="flow-example-text">
+                <strong>スマホ：</strong>GitHubアプリで通知タップ → 「Merge」ボタン<br>
+                <strong>PC：</strong>GitHubのPRページで「Merge pull request」をクリック
               </p>
             </div>
           </div>
